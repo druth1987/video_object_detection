@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "e23367f8-5a4c-4990-9916-814da6f7c6eb",
+		"name": "postman_requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37132233"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test_email@gmail.com\",\"first\":\"first_name\",\"last\":\"last_name\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/uploads",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test_email@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test_video",
+							"type": "text"
+						},
+						{
+							"key": "movie",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/uploads",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"uploads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/uploads?email=test_email@gmail.com",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/uploads?email=test_email@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"uploads"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test_email@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/movies?email=test_email@gmail.com&name=test_video",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/movies?email=test_email@gmail.com&name=test_video",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test_email@gmail.com"
+						},
+						{
+							"key": "name",
+							"value": "test_video"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/searches",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "API-Key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test_email@gmail.com\",\"name\":\"test_video\",\"word\":\"search_key_word\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/searches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"searches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/searches?email=test_email@gmail.com&name=test_video&word=search_key_word",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "API-key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/searches?email=test_email@gmail.com&name=test_video&word=search_key_word",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"searches"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test_email@gmail.com"
+						},
+						{
+							"key": "name",
+							"value": "test_video"
+						},
+						{
+							"key": "word",
+							"value": "search_key_word"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/searches?email=test_email@gmail.com&name=test_video&word=search_key_word",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "APi-key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/searches?email=test_email@gmail.com&name=test_video&word=search_key_word",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"searches"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test_email@gmail.com"
+						},
+						{
+							"key": "name",
+							"value": "test_video"
+						},
+						{
+							"key": "word",
+							"value": "search_key_word"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/movies?email=test_email@gmail.com&name=test_video",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "API-key",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/movies?email=test_email@gmail.com&name=test_video",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test_email@gmail.com"
+						},
+						{
+							"key": "name",
+							"value": "test_video"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

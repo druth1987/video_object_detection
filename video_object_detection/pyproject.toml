@@ -1,0 +1,10 @@
+[project]
+name = "video_object_detection"
+version = "0.1.0"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["celery_tasks", "connections", "frame_comparison", "frame_search", "s3_api", "sql_alchemy_queries", "video_capture"]
